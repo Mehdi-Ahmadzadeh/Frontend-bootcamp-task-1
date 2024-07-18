@@ -1,0 +1,136 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+:root {
+  --color-primary: #1e1e1e;
+  --color-secondary: #696969;
+  --color-btn: #219f95;
+  --color-blue: #234894;
+  --color-blue-light: #afcedd;
+  --color-white: #ffffff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.requests {
+  /* background-color: #ccc; */
+  margin: 5rem;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.request__title {
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+.request__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  justify-items: center;
+  /* background-color: #d7b0b0; */
+  font-size: 1.2rem;
+}
+.request__card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: gold; */
+  margin-bottom: 1rem;
+}
+.request__card__title {
+  display: flex;
+  align-items: center;
+  color: var(--color-blue);
+}
+.request__card {
+  /* background-color: #fff; */
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 5rem;
+}
+.number {
+  background-color: var(--color-blue-light);
+  padding: 0.4rem 1rem;
+  margin-left: 0.5rem;
+  border-radius: 6px;
+}
+.request__card__date {
+  font-size: 1rem;
+  color: var(--color-secondary);
+}
+.request__card__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-left: 0.5rem;
+}
+.requedt__card__info {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.request__card__btn {
+  padding: 1.3rem 0.8rem;
+  border-style: none;
+  border-radius: 8px;
+  background-color: var(--color-btn);
+  color: var(--color-white);
+  cursor: pointer;
+}
+.request__card__No {
+  font-size: 1rem;
+  color: var(--color-secondary);
+}
+.request__card__status {
+  font-size: 1.3rem;
+}
+
+@media screen and (width >= 640px) {
+  .request__title {
+    font-size: 2.2rem;
+  }
+  .request__cards {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4rem;
+  }
+  .request__card__info {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (width >= 1064px) {
+  .request__cards {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 4rem;
+  }
+  .request__title {
+    margin-bottom: 3rem;
+  }
+  .request__card__info {
+    font-size: 1.6rem;
+  }
+  .request__card__status {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+  .requests {
+    max-width: 1200px;
+    margin: 5rem 15rem;
+  }
+}
